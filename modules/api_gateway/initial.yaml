@@ -1,0 +1,20 @@
+# Basic hello-world config encoded as base64 used to bootstrap API Gateways.
+swagger: '2.0'
+info:
+  title: API_ID optional-string
+  version: 1.0.0
+schemes:
+  - https
+produces:
+  - application/json
+x-google-backend:
+  address: https://verily.com
+paths:
+  /hello:
+    get:
+      operationId: hello
+      responses:
+        '200':
+          description: hello response
+          schema:
+            type: string
